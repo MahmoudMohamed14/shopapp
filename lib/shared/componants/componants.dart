@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:shopapp/layout/shopcubit/shopcubit.dart';
+import 'package:shopapp/models/favorites_data_model.dart';
 
 
 void navigateTo(context,widget ){
@@ -117,7 +118,9 @@ Color? colorToast({ required ToastState state}){
   return color;
 
 }
-Widget buildProductItem({ product,context,bool isSearch=true}){
+Widget buildProductItem({product,context,bool isSearch=true}){
+
+
   return Padding(
     padding: const EdgeInsets.all(20),
     child: Container(
@@ -177,7 +180,7 @@ Widget buildProductItem({ product,context,bool isSearch=true}){
 
                         }
                         , icon:CircleAvatar(
-                        backgroundColor: ShopCubit.get(context).favorite[product.id]??false||product.in_favorite?Colors.blue:Colors.grey,
+                        backgroundColor:  ShopCubit.get(context).favorite[product.id]??false||product.in_favorite?Colors.blue:Colors.grey,
                         radius: 15,
                         child: Icon(Icons.favorite_border,color: Colors.white,)))
                   ],

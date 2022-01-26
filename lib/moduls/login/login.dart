@@ -53,13 +53,7 @@ class LoginScreen extends StatelessWidget {
 
 
             return Scaffold(
-              appBar: AppBar(
-                actions: [
-                  IconButton(onPressed: (){
-                    cubit.darkMode();
-                  }, icon: Icon(Icons.light_mode_outlined))
-                ],
-              ),
+
               body: Center(
                 child: SingleChildScrollView(
                   child: Padding(

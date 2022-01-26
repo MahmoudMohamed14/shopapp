@@ -54,6 +54,7 @@ class Product {
   String? image;
   String? name;
   String? description;
+  bool ?in_favorite;
 
 
 
@@ -65,6 +66,7 @@ class Product {
     image = json['image'];
     name = json['name'];
     description = json['description'];
+    in_favorite=json['in_favorite'];
   }
 
 
